@@ -125,7 +125,7 @@ module.exports = class GlobImportsPlugin {
 							id.endsWith('.mts'))
 					);
 				},
-				loader: 'string-replace-loader',
+				loader: require.resolve('string-replace-loader'),
 				options: {
 					search: /^[\S\s]+$/,
 					/**
