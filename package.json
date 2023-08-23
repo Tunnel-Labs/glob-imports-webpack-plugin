@@ -1,6 +1,6 @@
 {
 	"name": "glob-imports-webpack-plugin",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"type": "commonjs",
 	"exports": {
 		".": "./src/index.js"
@@ -8,11 +8,11 @@
 	"dependencies": {
 		"estree-walker": "^2.0.2",
 		"pkg-dir": "^5.0.0",
-		"acorn": "8.9.0",
-		"pathe": "1.1.1",
-		"glob-imports": "1.0.0",
-		"string-replace-loader": "3.1.0",
-		"webpack": "5.88.0",
-		"webpack-virtual-modules": "0.5.0"
+		"acorn": "^8.9.0",
+		"pathe": "^1.1.1",
+		"glob-imports": "^1.0.1",
+		"string-replace-loader": "^3.1.0",
+		"webpack": "^5.88.0",
+		"webpack-virtual-modules": "^0.5.0"
 	}
 }
