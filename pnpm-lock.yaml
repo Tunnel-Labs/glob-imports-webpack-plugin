@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -6,28 +6,28 @@ settings:
 
 dependencies:
   acorn:
-    specifier: 8.9.0
+    specifier: ^8.9.0
     version: 8.9.0
   estree-walker:
     specifier: ^2.0.2
     version: 2.0.2
   glob-imports:
-    specifier: 1.0.0
-    version: 1.0.0
+    specifier: ^1.0.1
+    version: 1.0.1
   pathe:
-    specifier: 1.1.1
+    specifier: ^1.1.1
     version: 1.1.1
   pkg-dir:
     specifier: ^5.0.0
     version: 5.0.0
-  tilde-imports:
-    specifier: 1.0.0
-    version: 1.0.0
+  string-replace-loader:
+    specifier: ^3.1.0
+    version: 3.1.0(webpack@5.88.0)
   webpack:
-    specifier: 5.88.0
+    specifier: ^5.88.0
     version: 5.88.0
   webpack-virtual-modules:
-    specifier: 0.5.0
+    specifier: ^0.5.0
     version: 0.5.0
 
 packages:
@@ -87,6 +87,13 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@tunnel/get-monorepo@1.0.0:
+    resolution: {integrity: sha512-uxvpiEmcIP8GdzIk9p9aozYUIJ+wQe3Rko+6W7uqyfnetoGjJznax0SJuKJS5+Hkm4x6NJL/nx/5CJjXBu56gg==}
+    dependencies:
+      map-obj: 5.0.2
+      pkg-up: 4.0.0
+    dev: false
 
   /@types/eslint-scope@3.7.4:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
@@ -285,6 +292,10 @@ packages:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
     dev: false
 
+  /big.js@5.2.2:
+    resolution: {integrity: sha512-vyL2OymJxmarO8gxMr0mhChsO9QGwhynfuu4+MHTAW6czfq9humCB7rKpUjDd9YUiDPU4mzpyupFSvOClAwbmQ==}
+    dev: false
+
   /brace-expansion@2.0.1:
     resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==}
     dependencies:
@@ -339,18 +350,6 @@ packages:
       which: 2.0.2
     dev: false
 
-  /detect-indent@7.0.1:
-    resolution: {integrity: sha512-Mc7QhQ8s+cLrnUfU/Ji94vG/r8M26m8f++vyres4ZoojaRDpZ1eSIh/EpzLNwlWuvzSZ3UbDFspjFvTDXe6e/g==}
-    engines: {node: '>=12.20'}
-    dev: false
-
-  /dot-prop@8.0.2:
-    resolution: {integrity: sha512-xaBe6ZT4DHPkg0k4Ytbvn5xoxgpG0jOS1dYxSOwAHPuNLjP3/OzN0gH55SrLqpx8cBfSaVt91lXYkApjb+nYdQ==}
-    engines: {node: '>=16'}
-    dependencies:
-      type-fest: 3.13.1
-    dev: false
-
   /eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: false
@@ -365,6 +364,11 @@ packages:
 
   /emoji-regex@9.2.2:
     resolution: {integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==}
+    dev: false
+
+  /emojis-list@3.0.0:
+    resolution: {integrity: sha512-/kyM18EfinwXZbno9FyUGeFh87KC8HRQBQGildHZbEuRyWFOmv1U10o9BBp8XVZDVNNuQKyIGIu5ZYAAXJ0V2Q==}
+    engines: {node: '>= 4'}
     dev: false
 
   /enhanced-resolve@5.15.0:
@@ -450,11 +454,11 @@ packages:
       signal-exit: 4.1.0
     dev: false
 
-  /glob-imports@1.0.0:
-    resolution: {integrity: sha512-84TQ0rFA/dFTnPx+it/d/OMLEWuHnUaxNlBoCKtiowgzWjQw+2AY12xhoWDK+Sa//BrcnNB5HhLZpo+rXZf/SA==}
+  /glob-imports@1.0.1:
+    resolution: {integrity: sha512-6hKCbp8m/vdC6ZECrg38GnYvfCvkIohvaH6baNVC0TfYMbfgvKjF4G0sVIAgKA/exk5bQyRvh0OyRe9kOcWSug==}
     dependencies:
+      '@tunnel/get-monorepo': 1.0.0
       glob: 10.3.1
-      lion-utils: 0.2.2
     dev: false
 
   /glob-to-regexp@0.4.1:
@@ -517,17 +521,24 @@ packages:
     resolution: {integrity: sha512-xbbCH5dCYU5T8LcEhhuh7HJ88HXuW3qsI3Y0zOZFKfZEHcpWiHU/Jxzk629Brsab/mMiHQti9wMP+845RPe3Vg==}
     dev: false
 
-  /lion-utils@0.2.2:
-    resolution: {integrity: sha512-6n3tglrDw6o16iSAwZfA61XYSP81TlvfTMUuS2Cu2BIeJquDrdBCJIOl1GlCr45Cafd+GLkiIvUJIEkwKrxX7Q==}
-    dependencies:
-      detect-indent: 7.0.1
-      dot-prop: 8.0.2
-      pkg-up: 4.0.0
+  /json5@2.2.3:
+    resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
+    engines: {node: '>=6'}
+    hasBin: true
     dev: false
 
   /loader-runner@4.3.0:
     resolution: {integrity: sha512-3R/1M+yS3j5ou80Me59j7F9IMs4PXs3VqRrm0TU3AbKPxlmpoY1TNscJV/oGJXo8qCatFGTfDbY6W6ipGOYXfg==}
     engines: {node: '>=6.11.5'}
+    dev: false
+
+  /loader-utils@2.0.4:
+    resolution: {integrity: sha512-xXqpXoINfFhgua9xiqD8fPFHgkoq1mmmpE92WlDbm9rNRd/EbRb+Gqf908T2DMfuHjjJlksiK2RbHVOdD/MqSw==}
+    engines: {node: '>=8.9.0'}
+    dependencies:
+      big.js: 5.2.2
+      emojis-list: 3.0.0
+      json5: 2.2.3
     dev: false
 
   /locate-path@6.0.0:
@@ -547,6 +558,11 @@ packages:
   /lru-cache@10.0.1:
     resolution: {integrity: sha512-IJ4uwUTi2qCccrioU6g9g/5rvvVl13bsdczUUcqbciD9iLr095yj8DQKdObriEvuNSx325N1rV1O0sJFszx75g==}
     engines: {node: 14 || >=16.14}
+    dev: false
+
+  /map-obj@5.0.2:
+    resolution: {integrity: sha512-K6K2NgKnTXimT3779/4KxSvobxOtMmx1LBZ3NwRxT/MDIR3Br/fQ4Q+WCX5QxjyUR8zg5+RV9Tbf2c5pAWTD2A==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: false
 
   /merge-stream@2.0.0:
@@ -717,6 +733,16 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
+  /string-replace-loader@3.1.0(webpack@5.88.0):
+    resolution: {integrity: sha512-5AOMUZeX5HE/ylKDnEa/KKBqvlnFmRZudSOjVJHxhoJg9QYTwl1rECx7SLR8BBH7tfxb4Rp7EM2XVfQFxIhsbQ==}
+    peerDependencies:
+      webpack: ^5
+    dependencies:
+      loader-utils: 2.0.4
+      schema-utils: 3.3.0
+      webpack: 5.88.0
+    dev: false
+
   /string-width@4.2.3:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
     engines: {node: '>=8'}
@@ -794,23 +820,6 @@ packages:
       acorn: 8.9.0
       commander: 2.20.3
       source-map-support: 0.5.21
-    dev: false
-
-  /tilde-imports@1.0.0:
-    resolution: {integrity: sha512-zh0BYuXDmBoS0Nn/zgVuZ/sp/RLFwHZsxY1BnOTOHFHubItLJIv/7l4x6XiRWbaFzs3Ut3/EXetSyaFoo8HZmQ==}
-    dependencies:
-      lion-utils: 0.2.2
-      pkg-dir: 5.0.0
-      tiny-invariant: 1.3.1
-    dev: false
-
-  /tiny-invariant@1.3.1:
-    resolution: {integrity: sha512-AD5ih2NlSssTCwsMznbvwMZpJ1cbhkGd2uueNxzv2jDlEeZdU04JQfRnggJQ8DrcVBGjAsCKwFBbDlVNtEMlzw==}
-    dev: false
-
-  /type-fest@3.13.1:
-    resolution: {integrity: sha512-tLq3bSNx+xSpwvAJnzrK0Ep5CLNWjvFTOp71URMaAEWBfRb9nnJiBoUe0tF8bI4ZFO3omgBR6NvnbzVUT3Ly4g==}
-    engines: {node: '>=14.16'}
     dev: false
 
   /update-browserslist-db@1.0.11(browserslist@4.21.10):
