@@ -144,7 +144,7 @@ module.exports = class GlobImportsPlugin {
               return fileContents;
             }
 
-            const importerFilePath = this.resourcePath;
+            const importerFilepath = this.resourcePath;
 
             /** @type {Array<{ start: number, end: number, value: string }>} replacements */
             const replacements = [];
@@ -182,7 +182,7 @@ module.exports = class GlobImportsPlugin {
 
                 const globfilePath = getGlobfilePath({
                   globfileModuleSpecifier,
-                  importerFilePath,
+                  importerFilepath,
                 });
 
                 globImportsPlugin.#writeModule(
@@ -224,11 +224,11 @@ module.exports = class GlobImportsPlugin {
 
     new NormalModuleReplacementPlugin(/^glob(?:\[[^:]+])?:/, (resource) => {
       const globfileModuleSpecifier = resource.request;
-      const importerFilePath = resource.contextInfo.issuer;
+      const importerFilepath = resource.contextInfo.issuer;
 
       const globfilePath = getGlobfilePath({
         globfileModuleSpecifier,
-        importerFilePath,
+        importerFilepath,
       });
 
       const virtualFileContents = getGlobfileContents({

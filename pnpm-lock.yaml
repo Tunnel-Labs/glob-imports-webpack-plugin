@@ -15,8 +15,8 @@ dependencies:
     specifier: ^1.0.1
     version: 1.0.1
   glob-imports:
-    specifier: ^2.0.0
-    version: 2.0.0
+    specifier: ^3.0.0
+    version: 3.0.0
   pathe:
     specifier: ^1.1.1
     version: 1.1.1
@@ -448,18 +448,19 @@ packages:
       pathe: 1.1.1
     dev: false
 
-  /glob-imports@2.0.0:
-    resolution: {integrity: sha512-haQux4t8vgZc84jyW2TwYuhWn+dv9ppMSfqHfDEMTD7DVE86tWLBa0f5dekcCE1hehOgSx8+Y0ktEtsdEcQo2A==}
+  /glob-imports@3.0.0:
+    resolution: {integrity: sha512-Q364tfWiUUAOjd0DsfsQFCCtV3i7wh8opVwuWVGVQO5SDp8P45cuq9eFp45v+cL8FPZER5FxQe5GmpEjHJFA3A==}
     dependencies:
-      glob: 10.3.1
+      glob: 10.3.4
+      pathe: 1.1.1
     dev: false
 
   /glob-to-regexp@0.4.1:
     resolution: {integrity: sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw==}
     dev: false
 
-  /glob@10.3.1:
-    resolution: {integrity: sha512-9BKYcEeIs7QwlCYs+Y3GBvqAMISufUS0i2ELd11zpZjxI5V9iyRj0HgzB5/cLf2NY4vcYBTYzJ7GIui7j/4DOw==}
+  /glob@10.3.4:
+    resolution: {integrity: sha512-6LFElP3A+i/Q8XQKEvZjkEWEOTgAIALR9AO2rwT8bgPhDd1anmqDJDZ6lLddI4ehxxxR1S5RIqKe1uapMQfYaQ==}
     engines: {node: '>=16 || 14 >=14.17'}
     hasBin: true
     dependencies:
